@@ -3,10 +3,25 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
+// decide which element like lowercase, uppercase, number and special characer. 
+//
 function writePassword() {
-  var length = 
-
+  var length = parseInt (document.getElementById ("length").value); //elementbyid
+  var lowercasen = document.getElementById("uppercase").checked;
+  var uppercase = document.getElementById("numeric").checked;
+  var numeric = document.getElementById("special").checked;
 }
+//now add in alphabet, uppercase alphabet numbers and characters
+  var chars = ""; {
+    if (lowercase) chars += "abcdefghijklmnopqrstuvwxyz" ;
+    if (uppercase) chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    if (numeric) chars += 
+    if (special) chars +=
+  }
+ 
+
+
+
 //var password? trying out math  
 // dont forget to use . when using a variable
 var password = "";
