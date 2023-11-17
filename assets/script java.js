@@ -4,27 +4,16 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = "";
-  var passwordText= document.getElementsByName ("password")
-  var charLength= window.prompt (password )
-  generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  var length = 
 
 }
-//8-128 characers, letters and symbols
-//try out math? 
-function generatePassword() {
-  var length = 8-,
-      charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-      retVal = "";
-  for (var i = 0, n = charset.length; i < length; ++i) {
-      retVal += charset.charAt(Math.floor(Math.random() * n));
-  }
-  return retVal;
-}
+//var password? 
 
+function writePassword() {
+  var password= generatePassword();
+  var passwordText = document.querySelector("passsword");
+  passwordText.value = password
+}
 
       // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
