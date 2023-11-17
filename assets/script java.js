@@ -12,15 +12,16 @@ function writePassword() {
   var numeric = document.getElementById("special").checked;
 }
 //now add in alphabet, uppercase alphabet numbers and characters
-  var chars = ""; {
+  var chars = ""; 
     if (lowercase) chars += "abcdefghijklmnopqrstuvwxyz" ;
     if (uppercase) chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    if (numeric) chars += 
-    if (special) chars +=
-  }
- 
-
-
+    if (numeric) chars += "0123456789"
+    if (special) chars +="!@#$%^&*()_+=-,<>./?\|;:'~`";
+//add alert to let gues know to meet password requirements
+    if (!chars || length <8 || >128) {
+      alert ("Please select valid criteria (length between 8 and 128, and at least one speical character and one uppercase letter).");
+      return "";
+    }
 
 //var password? trying out math  
 // dont forget to use . when using a variable
@@ -30,10 +31,12 @@ for (var i = 0; i < length; i++) {
   password += chars[randomIndex];
 }
 
+return password;
+
 //function and query selector repeated again here. remember to use var
 //dont forget semicolons this time!!
 function writePassword() {
-  var password= generatePassword();
+  var password= writePassword();
   var passwordText = document.querySelector("passsword");
   passwordText.value = password;
 }
