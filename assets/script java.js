@@ -11,7 +11,7 @@ function writePassword() {
 // dont forget to use . when using a variable
 var password = "";
 for (var i = 0; i < length; i++) {
-  var randomIndex + Math.floor (Math.random() *charset.length);
+  var randomIndex= Math.floor (Math.random() *charset.length);
   password += chars[randomIndex];
 }
 
